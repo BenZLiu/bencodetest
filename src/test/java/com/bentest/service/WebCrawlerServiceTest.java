@@ -19,6 +19,7 @@ public class WebCrawlerServiceTest {
 	private MyCrawler myCrawler;
 	private String correctURL = "https://www.theguardian.com/au";
 	private String incorrectURL = "test.test.com";
+	@SuppressWarnings("unused")
 	private String incorrecDecodeURL = "Æ Ø Å谁的粉丝地方a谁的粉丝地方a谁的粉丝";
 	// new String("コードから".getBytes(StandardCharsets.UTF_16BE));
 	private NewsEntityDAO newsEntityDAO;
@@ -75,9 +76,10 @@ public class WebCrawlerServiceTest {
 
 	@Test
 	public void testCrawlingFailure2() throws Exception {
-		myCrawler.crawl(incorrecDecodeURL, DATA_FOLDER, host, port, db);
-		EasyMock.expectLastCall().times(5);
-		ResultModel result = crawlerService.crawling(incorrecDecodeURL);
+		crawlerService.myCrawler = new MyCrawler();
+//		myCrawler.crawl(null, null, null, null, null);
+//		EasyMock.expectLastCall().times(5);
+		ResultModel result = crawlerService.crawling(correctURL);
 		Assert.assertEquals("FAILURE", result.getResult());
 	}
 
