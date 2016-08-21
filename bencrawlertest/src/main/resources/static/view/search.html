@@ -1,0 +1,8 @@
+<div>
+	<div class="main_content_head">Search</div>
+	<div class="main_content_input"><input ng-model="searchInput" type="text" class="main_content_input_field"/> <input class="main_content_input_button" type="button" ng-if="searchInput" ng-click="search();" value="search"/></div>
+	<div class="main_content_search_result" ng-repeat="news in newsList">
+		<div> <a target="_blank" href="{{news.url}}">{{news.title}}</a></div>
+		<div>{{news.content}}</div>
+	</div>
+</div>

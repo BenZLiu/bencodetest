@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="benTestApp">
+
+<link rel="stylesheet" href="css/main.css">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+<script src="js/main.js"></script>
+<script src="js/crawController.js"></script>
+<script src="js/searchController.js"></script>
+<style ></style>
+<body ng-controller="mainController" ng-init="init();" class="main_body">
+	<div class="main_top">
+		<div class="main_top_title"> Ben Crawler Test </div> 
+		<div style="padding-top:15px;">
+			 <a class="menu_btn" href="#crawling">Crawling</a>
+		     <a class="menu_btn" href="#searching">Searching</a>
+		</div>
+	</div>
+	<div class="main_view" ng-view>
+	</div>
+<div ng-if="isLoading" class="loading_cls">
+	<div style="height:15px;margin-top:250px;text-align:center">loading...</div>
+</div>
+</body>
+</html>
