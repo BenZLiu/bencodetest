@@ -1,0 +1,6 @@
+<div class="main_content">
+
+	<div class="main_content_head">Crawl</div>
+	<div class="main_content_input"> <input ng-model="url" type="text" class="main_content_input_field"/>  <input type="button" ng-if="url" ng-click="crawl();" class="main_content_input_button" value="crawl"/></div>
+	<div class="main_content_message" ng-if="showMsgFlag">{{crawlerMessage}}</div>
+</div>
