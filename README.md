@@ -3,6 +3,8 @@ web crawler test
 
 This project is using Spring boot, MongoDB, Java 7+, crawler4j, AngularJS, Jasmine, Spring webservice, Maven, JUnist, EasyMock.
 
+Please import as a Maven project from Eclipse.
+
 Please make sure have MongoDB installed in your env.
 
 Please change the MongoDB in application.properties under resources folder.
