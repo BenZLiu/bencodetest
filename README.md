@@ -18,3 +18,5 @@ After run the maven job, you can simply run the App.java as java application, an
 On the top there are 2 buttons Crawling and Searching which are the 2 APIs I implemented.
 
 http://localhost:8080/test/test.html is the unit test page for AngularJS
+
+Unit test code for Java is under src/test folder, you can run the java files as Junit.
